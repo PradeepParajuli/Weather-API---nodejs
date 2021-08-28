@@ -2,8 +2,8 @@ const path = require("path")
 const express = require("express")
 const hbs = require("hbs")
 const { Z_ASCII } = require("zlib")
-const forecast = require('./utils/forecast')
-const geocode = require('./utils/geocode')
+const forecast = require('./src/utils/forecast');
+const geocode = require('./src/utils/geocode')
 
 const app = express()
 
@@ -112,6 +112,6 @@ app.get('*', (req, res) => {
 //     res.send("<h1>About</h1>")
 // })
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log("server started on port: ",PORT))
